@@ -1,0 +1,127 @@
+$primary-bg-color: #315af2;
+$primary-bg-color-hover: #6483f5;
+$primary-bg-color-disabled: #acbdfa;
+
+$primary-color: #fff;
+$primary-color-hover: $primary-color;
+$primary-color-disabled: #ced8fc;
+
+
+$secondary-color: #e9399c;
+
+a {
+  color: $primary-bg-color;
+  &:hover {
+    color: $primary-bg-color-hover
+  }
+  &:disabled {
+    color: $primary-bg-color-disabled;
+  }
+}
+
+.main-post-text {
+  padding: 15px 0 30px;
+}
+
+
+.btn-large {
+  min-width: 128px;
+  height: 43px;
+
+  font-family: Museo Cyrl;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: $primary-bg-color;
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-bg-color-hover;
+    color: $primary-color-hover
+  }
+  &:disabled {
+    background-color: $primary-bg-color-disabled;
+    color: $primary-color-disabled;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Museo Cyrl;
+
+  line-height: 116%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.416667px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+a {
+  color: #315AF2;
+}
+
+.image-bg {
+  background-size: 45% auto;
+  background-repeat: no-repeat;
+
+  &-right {
+    background-position: 100% 50%;
+  }
+}
+
+
+//Labels
+
+.blog-labels {
+  position: absolute;
+  
+  font-family: Circe Rounded;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.416667px;
+
+  > * {
+    margin-right: 5px;
+  }
+
+  .new {
+    display: inline-block;
+    color: #E9399C;
+
+    &:before {
+      content: 'NEW';
+    }
+  }
+
+  .comments, .likes, .views {
+    color: #CDCDCD;
+    display: inline-block;
+    &:before {
+      content: '';
+
+      height: 17px;
+      width: 25px;
+      position: relative;
+      top: 3px;
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+  }
+
+  .comments:before {
+    background-image: url('images/ic-comment.svg');
+  }
+  .likes:before {
+    background-image: url('images/ic-like.svg');
+  }
+  .views:before {
+    background-image: url('images/ic-view.svg');
+  }
+}

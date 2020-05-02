@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+    <div class="container">
+
+        {% if main_post %}
+            <div class="row image-bg image-bg-right" style="background-image: url('{{ main_post.image.url }}')">
+                <div class="col s8">
+                    <div class="blog-labels">
+                        <div class="new"></div>
+                        <div class="likes">25</div>
+                        <div class="comments">25</div>
+                        <div class="views">25</div>
+                    </div>
+
+                    <h2><a href="#">{{ main_post.title }}</a></h2>
+                    <div class="main-post-text">
+                        {{ main_post.text|truncatechars_html:160 }}
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <a class="waves-effect waves-light btn btn-primary btn-large">{% trans 'Read' %}</a>
+
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="divider"></div>
+
+    <div class="container">
+
+        <h3>
+            {% trans 'Other posts' %}
+        </h3>
+
+        {% if posts %}
+            <div class="row">
+                {% for post in posts %}
+                    <div class="col s4">
+                        <div class="card">
+                            <div class="card-content white-text">
+                                <span class="card-title">
+                                    {{ post.title }}
+                                </span>
+                                {{ post.text }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    </div>
+
+{% endblock content %}
