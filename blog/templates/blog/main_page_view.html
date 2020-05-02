@@ -42,14 +42,15 @@
                         <div class="card">
                             <div class="card-content">
 
-                                <div class="text-muted">
+                                <div class="text-muted piblished-date">
                                     {{ post.published|date:'d b Y H:i' }}
                                 </div>
                                 <div class="clearfix"></div>
 
-                                <span class="card-title">
-                                    {{ post.title }}
-                                </span>
+                                <h4 class="center-align">
+                                    <a href="#">{{ post.title }}</a>
+                                </h4>
+
                                 <div class="clearfix"></div>
 
                                 <div class="blog-labels">

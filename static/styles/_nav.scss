@@ -1,0 +1,76 @@
+$local-user-panel-icon-size: 24px;
+$local-user-panel-size: $local-user-panel-icon-size * 5;
+
+$local-user-panel-icon-margin-fix: $local-user-panel-icon-size / 8;
+
+
+.brand-logo {
+  height: 100%;
+  width: 170px;
+  margin: 0 15px 0;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.user-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  margin: 0 15px 0;
+
+  width: $local-user-panel-size;
+
+  .mail, .logout, .profile {
+    display: flex;
+    background-size: contain;
+    background-position: center;
+    width: $local-user-panel-icon-size;
+    height: $local-user-panel-icon-size;
+  }
+
+  .mail {
+    background-image: url('images/ic-email.svg');
+    margin-bottom: $local-user-panel-icon-margin-fix;
+  }
+  .profile {
+    background-image: url('images/ic-profile.svg');
+    width: $local-user-panel-icon-size * 2;
+    height: $local-user-panel-icon-size * 2;
+  }
+  .logout {
+    margin-top: $local-user-panel-icon-margin-fix;
+    background-image: url('images/ic-logout.svg');
+  }
+}
+
+
+//Customize navbar
+
+nav {
+  background-color: white;
+
+  .nav-wrapper {
+    color: black;
+
+    a {
+      color: black;
+      &:hover {
+        color: #494949;
+        background-color: rgba(0,0,0,.1);
+      }
+    }
+  }
+}
+
+.navbar-fixed + * {
+  margin-top: 30px;
+}

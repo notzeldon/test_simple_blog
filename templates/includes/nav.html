@@ -1,0 +1,18 @@
+{% load i18n static %}
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo left">
+                <img src="{% static 'styles/images/logo.png' %}" alt="Logo">
+            </a>
+            <div class="container hide-on-med-and-down">
+                <ul id="nav-mobile" class="">
+                    <li><a href="#">{% trans 'Blog' %}</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                {% include 'includes/user-panel.html' %}
+            </div>
+        </div>
+    </nav>
+</div>

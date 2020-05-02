@@ -1,6 +1,10 @@
 @import 'fonts/CirceRounded/stylesheet.css';
 @import 'fonts/MuseoCyrl/museocyrl.css';
 
+@import "variables";
+@import "nav";
+
+
 * {
   font-family: "Circe Rounded";
 }
@@ -10,19 +14,7 @@
   font-family: Museo Cyrl;
 }
 
-$primary-bg-color: #315af2;
-$primary-bg-color-hover: #6483f5;
-$primary-bg-color-disabled: #acbdfa;
 
-$primary-color: #fff;
-$primary-color-hover: $primary-color;
-$primary-color-disabled: #ced8fc;
-
-
-$secondary-color: #e9399c;
-
-
-$grey-color: #CDCDCD;
 
 a {
   color: $primary-bg-color;
@@ -34,8 +26,35 @@ a {
   }
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 116%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.416667px;
+  color: $primary-bg-color;
+}
+
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+
 .text-muted {
   color: $grey-color;
+}
+
+.piblished-date {
+  font-size: 12px;
 }
 
 .main-post-text {
@@ -76,20 +95,7 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 116%;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.416667px;
-}
 
-h2 {
-  font-size: 45px;
-}
-
-a {
-  color: $primary-bg-color;
-}
 
 .image-bg {
   background-size: 45% auto;
@@ -118,7 +124,7 @@ a {
 
   .new {
     display: inline-block;
-    color: #E9399C;
+    color: $pink-color;
 
     &:before {
       content: 'NEW';
