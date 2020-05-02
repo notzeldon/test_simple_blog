@@ -1,3 +1,15 @@
+@import 'fonts/CirceRounded/stylesheet.css';
+@import 'fonts/MuseoCyrl/museocyrl.css';
+
+* {
+  font-family: "Circe Rounded";
+}
+
+.card-title, h1, h2, h3, h4, h5, h6, .btn-large
+{
+  font-family: Museo Cyrl;
+}
+
 $primary-bg-color: #315af2;
 $primary-bg-color-hover: #6483f5;
 $primary-bg-color-disabled: #acbdfa;
@@ -9,6 +21,9 @@ $primary-color-disabled: #ced8fc;
 
 $secondary-color: #e9399c;
 
+
+$grey-color: #CDCDCD;
+
 a {
   color: $primary-bg-color;
   &:hover {
@@ -17,6 +32,10 @@ a {
   &:disabled {
     color: $primary-bg-color-disabled;
   }
+}
+
+.text-muted {
+  color: $grey-color;
 }
 
 .main-post-text {
@@ -28,7 +47,6 @@ a {
   min-width: 128px;
   height: 43px;
 
-  font-family: Museo Cyrl;
   font-size: 36px;
   line-height: 43px;
   text-align: center;
@@ -47,9 +65,18 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Museo Cyrl;
+.card {
+  &-title {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.416667px;
 
+    color: $primary-bg-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
   line-height: 116%;
   display: flex;
   align-items: center;
@@ -61,7 +88,7 @@ h2 {
 }
 
 a {
-  color: #315AF2;
+  color: $primary-bg-color;
 }
 
 .image-bg {
@@ -76,10 +103,11 @@ a {
 
 //Labels
 
-.blog-labels {
+.absolute {
   position: absolute;
-  
-  font-family: Circe Rounded;
+}
+
+.blog-labels {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.416667px;
@@ -98,7 +126,7 @@ a {
   }
 
   .comments, .likes, .views {
-    color: #CDCDCD;
+    color: $grey-color;
     display: inline-block;
     &:before {
       content: '';
