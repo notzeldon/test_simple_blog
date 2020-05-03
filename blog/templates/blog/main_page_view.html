@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% load i18n %}
+{% load static i18n %}
 
 {% block content %}
 
-    <div class="container">
+    <div class="container main-post">
 
         {% if main_post %}
             <div class="row image-bg image-bg-right" style="background-image: url('{{ main_post.image.url }}')">
@@ -31,38 +31,51 @@
 
     <div class="container">
 
-        <h3>
-            {% trans 'Other posts' %}
-        </h3>
+        <div class="row">
+            <div class="col s12">
+
+                <h3 class="left">
+                    {% trans 'Other posts' %}
+                </h3>
+
+                <div class="sort right">
+                    <img src="{% static 'styles/images/ic-sort.svg' %}" alt="Sort">
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
 
         {% if posts %}
             <div class="row">
                 {% for post in posts %}
                     <div class="col s4">
-                        <div class="card">
+                        <div class="card" style="background-image: url('{{ post.image.url }}')">
                             <div class="card-content">
 
-                                <div class="text-muted piblished-date">
+                                <div class="text-muted published-date">
                                     {{ post.published|date:'d b Y H:i' }}
                                 </div>
                                 <div class="clearfix"></div>
 
-                                <h4 class="center-align">
-                                    <a href="#">{{ post.title }}</a>
-                                </h4>
+                                <div>
+                                    <h4 class="center-align">
+                                        <a href="#">{{ post.title }}</a>
+                                    </h4>
 
-                                <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
 
-                                <div class="blog-labels">
-                                    <div class="left">
-                                        <div class="likes">25</div>
-                                        <div class="comments">25</div>
+                                    <div class="blog-labels">
+                                        <div class="left">
+                                            <div class="likes">25</div>
+                                            <div class="comments">25</div>
+                                        </div>
+                                        <div class="right">
+                                            <div class="views">25</div>
+                                        </div>
                                     </div>
-                                    <div class="right">
-                                        <div class="views">25</div>
-                                    </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div class="clearfix"></div>
 
                             </div>
                         </div>

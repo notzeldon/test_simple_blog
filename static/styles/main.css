@@ -39,6 +39,9 @@ nav {
   background-color: white; }
   nav .nav-wrapper {
     color: black; }
+    nav .nav-wrapper ul li a {
+      font-size: 24px;
+      padding-top: 3px; }
     nav .nav-wrapper a {
       color: black; }
       nav .nav-wrapper a:hover {
@@ -52,7 +55,8 @@ nav {
   font-family: "Circe Rounded"; }
 
 .card-title, h1, h2, h3, h4, h5, h6, .btn-large {
-  font-family: Museo Cyrl; }
+  font-family: Museo Cyrl;
+  font-weight: bold; }
 
 a {
   color: #315af2; }
@@ -80,11 +84,13 @@ h4 {
 .text-muted {
   color: #CDCDCD; }
 
-.piblished-date {
+.published-date {
   font-size: 12px; }
 
-.main-post-text {
-  padding: 15px 0 30px; }
+.main-post {
+  padding-bottom: 30px; }
+  .main-post-text {
+    padding: 15px 0 30px; }
 
 .btn-large {
   min-width: 128px;
@@ -103,12 +109,34 @@ h4 {
     background-color: #acbdfa;
     color: #ced8fc; }
 
-.card-title {
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: -0.416667px;
-  color: #315af2; }
+.card {
+  background-size: auto 60%;
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 50%;
+  border: 2px solid #CDCDCD;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: none; }
+  .card:hover {
+    border: 2px solid #E2EDF8;
+    box-shadow: 0px 2px 10px #E2EDF8; }
+  .card .card-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .card h4 {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.416667px;
+    color: #315af2; }
 
 .image-bg {
   background-size: 45% auto;
@@ -118,6 +146,12 @@ h4 {
 
 .absolute {
   position: absolute; }
+
+.sort {
+  margin-top: 36px;
+  height: 30px; }
+  .sort img {
+    height: 100%; }
 
 .blog-labels {
   font-size: 16px;
