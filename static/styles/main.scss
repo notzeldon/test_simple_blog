@@ -3,6 +3,7 @@
 
 @import "variables";
 @import "nav";
+@import "forms";
 
 
 * {
@@ -79,7 +80,7 @@ h4 {
 .btn-primary {
   background-color: $primary-bg-color;
   color: $primary-color;
-  &:hover {
+  &:hover, &:focus {
     background-color: $primary-bg-color-hover;
     color: $primary-color-hover
   }
@@ -88,6 +89,22 @@ h4 {
     color: $primary-color-disabled;
   }
 }
+
+
+.btn-submit {
+  background-color: $submit-bg-color;
+  color: $submit-color;
+  &:hover, &:focus {
+    background-color: $submit-bg-color-hover;
+    color: $submit-color-hover
+  }
+  &:disabled {
+    background-color: $submit-bg-color-disabled;
+    color: $submit-color-disabled;
+  }
+}
+
+
 
 .card {
   background-size: auto 60%;
@@ -120,6 +137,7 @@ h4 {
 
 
   h4 {
+    display: block;
     font-size: 18px;
     line-height: 22px;
     text-align: center;

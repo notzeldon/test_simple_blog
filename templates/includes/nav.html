@@ -7,7 +7,8 @@
             </a>
             <div class="container hide-on-med-and-down">
                 <ul id="nav-mobile" class="">
-                    <li><a href="#">{% trans 'Blog' %}</a></li>
+                    <li><a href="{% url 'blog-main' %}">{% trans 'Blog' %}</a></li>
+                    <li><a href="{% url 'blog-create' %}">{% trans 'Add new post' %}</a></li>
                 </ul>
             </div>
             <div class="right">

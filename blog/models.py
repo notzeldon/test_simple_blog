@@ -26,9 +26,8 @@ class BlogPost(models.Model):
     )
 
     published = models.DateTimeField(
-        verbose_name=_('piblished at'),
-        blank=True,
-        null=True,
+        verbose_name=_('published at'),
+        auto_now_add=True,
     )
 
     def __str__(self):

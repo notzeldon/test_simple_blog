@@ -1,0 +1,86 @@
+@import "variables";
+
+form {
+  input {
+    text-indent: 15px;
+  }
+
+  input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default),
+  textarea.materialize-textarea,
+  .field-imitation
+
+  {
+    width: calc(100% - 4px);
+    border: 2px solid #CDCDCD;
+    border-radius: 3px;
+  }
+
+  .image-picker {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+
+    &-preview {
+      display: none;
+    }
+
+    &-preview[style] {
+      display: block;
+      border: 2px solid #E5E5E5;
+      box-sizing: border-box;
+      padding: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: relative;
+
+      & .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background-color: #E5E5E5;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+
+    &-preview[style] + * {
+      display: none;
+    }
+  }
+
+  .field-label {
+    color: $primary-bg-color;
+    font-size: 22px;
+  }
+
+  .faked-editor {
+    padding: 50px 15px 15px 15px;
+    min-height: 300px;
+    width: 100% !important;
+    background-image: url('images/faked-edotor.svg');
+    background-size: contain;
+    background-position: center 0;
+    background-repeat: no-repeat;
+  }
+
+
+  .btn {
+    min-width: 90px;
+    height: 49px;
+
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+
+.hidden-field {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

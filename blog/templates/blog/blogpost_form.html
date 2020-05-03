@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans 'Add new post' %}
+{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2>
+                    {% trans 'Add new post' %}
+                </h2>
+            </div>
+
+            <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                {% csrf_token %}
+
+                {% if form.errors %}
+                <div class="row errors">
+                    <div class="col s12">
+                        <div class="errors card-panel red lighten-3">
+                            {{ form.errors }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col s12 m8">
+                        {{ form.title }}
+                    </div>
+                    <div class="col s12 m4">
+                        <button class="waves-effect waves-light btn btn-submit">
+                            {% trans 'Publish' %}
+                        </button>
+                    </div>
+                    <div class="clearfix"><br></div>
+
+                    <div class="col s12 m8">
+                        {{ form.text }}
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="image-picker field-imitation">
+                            <div class="field-label">
+                                {% trans 'Load image' %}
+                            </div>
+                            <div class="image-picker-preview">
+                                <i class="close material-icons">{% trans 'close' %}</i>
+                            </div>
+                            <div class="image-picker-button">
+                                <button data-field="{{ form.image.id_for_label }}"
+                                        class="waves-effect waves-light btn btn-primary"
+                                        onclick="document.getElementById(this.dataset.field).click();"
+                                >
+                                    {% trans 'Choose' %}
+                                </button>
+                                <div class="hidden-field">
+                                    {{ form.image }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{ form.media }}
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock content %}

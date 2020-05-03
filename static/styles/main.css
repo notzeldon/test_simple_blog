@@ -51,6 +51,64 @@ nav {
 .navbar-fixed + * {
   margin-top: 30px; }
 
+form input {
+  text-indent: 15px; }
+form input:not([type]), form input[type="text"]:not(.browser-default), form input[type="password"]:not(.browser-default), form input[type="email"]:not(.browser-default), form input[type="url"]:not(.browser-default), form input[type="time"]:not(.browser-default), form input[type="date"]:not(.browser-default), form input[type="datetime"]:not(.browser-default), form input[type="datetime-local"]:not(.browser-default), form input[type="tel"]:not(.browser-default), form input[type="number"]:not(.browser-default), form input[type="search"]:not(.browser-default),
+form textarea.materialize-textarea,
+form .field-imitation {
+  width: calc(100% - 4px);
+  border: 2px solid #CDCDCD;
+  border-radius: 3px; }
+form .image-picker {
+  text-align: center;
+  width: 100%;
+  padding: 15px; }
+  form .image-picker-preview {
+    display: none; }
+  form .image-picker-preview[style] {
+    display: block;
+    border: 2px solid #E5E5E5;
+    box-sizing: border-box;
+    padding: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative; }
+    form .image-picker-preview[style] .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: #E5E5E5;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer; }
+      form .image-picker-preview[style] .close:hover {
+        background-color: #ccc; }
+  form .image-picker-preview[style] + * {
+    display: none; }
+form .field-label {
+  color: #315af2;
+  font-size: 22px; }
+form .faked-editor {
+  padding: 50px 15px 15px 15px;
+  min-height: 300px;
+  width: 100% !important;
+  background-image: url("images/faked-edotor.svg");
+  background-size: contain;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+form .btn {
+  min-width: 90px;
+  height: 49px;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center; }
+
+.hidden-field {
+  width: 0;
+  height: 0;
+  overflow: hidden; }
+
 * {
   font-family: "Circe Rounded"; }
 
@@ -102,11 +160,21 @@ h4 {
 .btn-primary {
   background-color: #315af2;
   color: #fff; }
-  .btn-primary:hover {
+  .btn-primary:hover, .btn-primary:focus {
     background-color: #6483f5;
     color: #fff; }
   .btn-primary:disabled {
     background-color: #acbdfa;
+    color: #ced8fc; }
+
+.btn-submit {
+  background-color: #E9399C;
+  color: #fff; }
+  .btn-submit:hover, .btn-submit:focus {
+    background-color: #ee7fbd;
+    color: #fff; }
+  .btn-submit:disabled {
+    background-color: #ffbee3;
     color: #ced8fc; }
 
 .card {
@@ -132,6 +200,7 @@ h4 {
     right: 0;
     bottom: 0; }
   .card h4 {
+    display: block;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
